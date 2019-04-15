@@ -4,11 +4,12 @@ module.exports = {
     "^.+\\.vue$": "vue-jest",
     ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$":
       "jest-transform-stub",
-    "^.+\\.jsx?$": "babel-jest"
+    "^.+\\.js$": "babel-jest"
   },
   transformIgnorePatterns: ["/node_modules/"],
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1"
+    "^@/(.*)$": "<rootDir>/src/$1",
+    'quasar': 'quasar-framework/dist/umd/quasar.mat.umd.js'
   },
   snapshotSerializers: ["jest-serializer-vue"],
   testMatch: [
